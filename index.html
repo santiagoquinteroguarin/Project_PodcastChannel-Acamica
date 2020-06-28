@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Santiago Quintero Guarin">
+    <meta name="description" content="Podcast-channel">
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <link rel="icon" href="/images/logo.svg">
+    <title>PodcastChannel</title>
+</head>
+<body>
+    <!-- Inicio Contenedor Principal -->
+    <div class="layout">
+
+        <!-- Inicio header -->
+        <div class="wrap-header">
+            <div class="header">
+                <div class="wrap-logo">
+                    <img src="/images/logo.svg" alt="logo podcast channel">
+                </div>
+                <nav class="navigation">
+                    <input type="checkbox" id="hamburger">
+                    <label for="hamburger" class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="mdi-window-close" width="20" height="20" viewBox="0 0 24 24">
+                            <path d="M 2 5 L 2 7 L 22 7 L 22 5 L 2 5 z M 2 11 L 2 13 L 22 13 L 22 11 L 2 11 z M 2 17 L 2 19 L 22 19 L 22 17 L 2 17 z"/>
+                        </svg>
+                    </label>
+
+                    <ul class="nav-links">
+                        <li><a href="#episodes">Episodios</a></li>
+                        <li><a href="#source">Nosotros</a></li>
+                        <li><a href="#entrevistas">Entrevistas</a></li>
+                        <li><a href="#topicos">Tópicos</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <!-- fin header -->
+
+        <!-- Inicio Hero -->
+        <div class="hero">
+
+            <div class="wrap-hero">
+                <div class="t-hero">
+                    <h1>Hello <del>world</del> pale blue dot<span>.</span></h1>
+                </div>
+                <div class="p-hero">
+                    <p>
+                        El portal de podcasts que explora el mundo de la programación y
+                        la tecnología. Nuevos episodios, todos los jueves cada 15 días.
+                    </p>
+                </div>
+                <div class="btn-hero">
+                    <input class="button" onclick="window.location.href = '#topicos'" type="button" value="Conocé más">
+                </div>
+            </div>
+        </div>
+        <!-- Fin Hero -->
+
+        <!-- Inicio Section -->
+        <section class="episodes" id="episodes">
+            <!-- contenedor para background -->
+            <div class="background"></div>
+
+            <!-- contendor imagenes -->
+            <div class="wrap-episodes">
+                <div class="title-section">
+                    <h2>Episodios</h2>
+                </div>
+
+                <div class="wrap-podcast javascript">
+                    <iframe src="https://open.spotify.com/embed-podcast/episode/0iEqLknZO7FPWWjou2joSL" width="100" height="232"></iframe>
+                </div>
+
+                <div class="wrap-podcast html">
+                    <iframe src="https://open.spotify.com/embed-podcast/episode/2c1Cij36osUSeiMJEDfsCG" width="100" height="232"></iframe>
+                </div>
+
+                <div class="wrap-podcast office">
+                    <iframe src="https://open.spotify.com/embed-podcast/episode/7JFrlO6nWIwrmErc5HjN2W" width="100" height="232"></iframe>
+                </div>
+
+                <div class="wrap-podcast graphql">
+                    <iframe src="https://open.spotify.com/embed-podcast/episode/6ibnyY2NNVDYozSqQG17vn" width="100" height="232"></iframe>
+                </div>
+            </div>
+        </section>
+        <!-- Fin Section -->
+
+        <!-- Inicio origen -->
+        <div class="origin" id="source">
+            <figure class="container-phone">
+                <div class="wrap-phone">
+                    <img src="./images/phone.png" alt="Imagen de un telefono movil">
+                </div>
+            </figure>
+
+            <article class="wrap-info">
+                <div class="t-origin">
+                    <h2>De dónde venimos</h2>
+                </div>
+                <div class="p-origin">
+                    <p>
+                        Our posturing, our imagined self-importance,
+                        the delusion that we have sone privileged
+                        position in the universe, are challeged by this
+                        point of pale light.
+                        <br><br>
+                        Our planet is a lonely speck in the great
+                        enveloping cosmic dark. In our obscurity, in all
+                        this vastness, there is no hint that help will
+                        come from elsewhere to save us from ourselves.
+                    </p>
+                </div>
+            </article>
+        </div>
+        <!-- Fin origen -->
+
+        <!-- Inicio section invitad@s -->
+        <section class="guests" id="entrevistas">
+            <div class="wrap-visitor">
+                <div class="title-guests">
+                    <h2>Invitadas/os estelares</h2>
+                </div>
+                <picture class="host hopper">
+                    <img src="./images/gracehopper.png" alt="foto de grace-hopper">
+                </picture>
+
+                <picture class="host bouman">
+                    <img src="./images/KatieBouman.png" alt="foto de katie bouman">
+                </picture>
+
+                <picture class="host hamilton">
+                    <img src="./images/MargaretHamilton.png" alt="foto de margaret hamilton">
+                </picture>
+
+                <picture class="host computer">
+                    <img src="./images/AnERAUnivac1103computerinthe1950s.png" alt="foto de un computador en los años 1950">
+                </picture>
+
+                <picture class="host operator">
+                    <img src="./images/ComputeroperatorswithanEniatheworldsfirstprogrammablegeneralpurposecomputer.png" alt="foto de personas operandon un computador">
+                </picture>
+
+                <picture class="host kare">
+                    <img src="./images/susankare.png" alt="foto de susan kare">
+                </picture>
+            </div>
+        </section>
+        <!-- Fin section invitad@s -->
+
+        <!-- Inicio section temario -->
+        <section class="temary" id="topicos">
+            <div class="wrap-temary">
+                <div class="title-temary">
+                    <h2>Algunos de nuestros temas</h2>
+                </div>
+                <div class="box-temary work">
+                    <img src="./images/icon1.svg" alt="imagen referente a trabajo remoto">
+                    <p><strong>Trabajo Remoto</strong></p>
+                </div>
+
+                <div class="box-temary programming">
+                    <img src="./images/icon2.svg" alt="imagen referente a la programación">
+                    <p><strong>Repensando la programación</strong></p>
+                </div>
+
+                <div class="box-temary code">
+                    <img src="./images/icon3.svg" alt="imagen de un computador">
+                    <p><strong>Bases del código</strong></p>
+                </div>
+
+                <div class="box-temary security">
+                    <img src="./images/icon4.svg" alt="imagen referente a la seguridad informatica">
+                    <p><strong>Seguridad informática</strong></p>
+                </div>
+            </div>
+        </section>
+        <!-- Fin section temario -->
+
+        <!-- Inicio novedades -->
+        <div class="news">
+            <div class="background-n"></div>
+
+            <div class="wrap-news">
+                <div class="t-news">
+                    <h2>¿Quieres las últimas novedades?</h2>
+                </div>
+                <div class="btn-news">
+                    <input type="button" onclick="window.location.href = '#episodes'" value="Escuchá los episodios">
+                </div>
+            </div>
+        </div>
+        <!-- Fin novedades -->
+
+        <!-- Inicio Footer -->
+        <footer class="footer">
+            <div class="wrap-footer">
+                <div class="wrap-text">
+                    <p>
+                        &copy; <time datetime="2020-03-27">2020</time>&ndash;  Hello blue palet dot
+                    </p>
+                </div>
+    
+                <div class="wrap-icon">
+                    <ul>
+                        <li><a href="https://www.spotify.com/co/" target="_blank"><i class="fab fa-spotify"></i></a></li>
+                        <li><a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://twitter.com/explore" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="https://web.facebook.com/?_rdc=1&_rdr" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                        <li><a href="https://web.telegram.org/" target="_blank"><i class="fab fa-telegram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <!-- Fin Footer -->
+    </div>
+    <!-- Fin Contenedor Principal -->
+
+    <!-- Script fontawesome -->
+    <script src="https://kit.fontawesome.com/232e246375.js" crossorigin="anonymous"></script>
+</body>
+</html>

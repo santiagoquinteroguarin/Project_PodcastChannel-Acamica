@@ -1,0 +1,49 @@
+@mixin displayFlex($flex-direction, $flex-wrap, $justify-content, $align-items){
+    display: flex;
+    flex-flow: $flex-direction $flex-wrap;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+
+
+@mixin btn-styles($btn-width, $btn-height ,$font-f-btn, $font-s-btn, $letter-spacing-btn, $color-letter-btn, $background-button, $background-secundary-btn, $color-secundary-btn,$text-transform){
+    input{
+        cursor: pointer;
+        width: $btn-width;
+        height: $btn-height;
+        border: none;
+        font-family: $font-f-btn;
+        font-size: $font-s-btn;
+        letter-spacing: $letter-spacing-btn;
+        color: $color-letter-btn;
+        text-align: $text-align-btn;
+        line-height: $line-height-btn;
+        background: $background-button;
+        text-transform: $text-transform;
+
+        &:hover{
+            background: $background-secundary-btn;
+            color: $color-secundary-btn;
+        }
+    }
+}
+
+@mixin styles-titles-sections($font-f-titles-sections, $font-s-titles-sections, $color-title-section, $line-height-title-section){
+    h2{
+        font-family: $font-f-titles-sections;
+        font-size: $font-s-titles-sections;
+        color: $color-title-section;
+        letter-spacing: $letter-spacing;
+        line-height: $line-height-title-section;
+    }
+}
+
+@mixin styles-paragraphs($font-f-paragraph, $font-s-paragraph, $color-paragraph, $lh-paragraph, $letter-spacing){
+    p {
+        font-family: $font-f-paragraph;
+        font-size: $font-size-responsive;
+        color: $color-paragraph;
+        line-height: $lh-paragraph;
+        letter-spacing: $letter-spacing;
+    }
+}

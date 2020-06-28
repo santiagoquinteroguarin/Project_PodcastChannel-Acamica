@@ -1,0 +1,145 @@
+.guests {
+    width: 100%;
+    height: 100%;
+    background: $background-primary;
+
+    .wrap-visitor {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 112px repeat(6, 243px);
+        grid-template-areas:
+        "title"
+        "hoper"
+        "bouman"
+        "hamilton"
+        "computer"
+        "operator"
+        "kare";
+
+        .host {
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .title-guests {
+            grid-area: title;
+            width: 90%;
+            margin: 0px auto;
+            @include styles-titles-sections($font-f-titles-sections, 36px, $color-title-section, $line-height-title-section);
+        }
+
+        .hopper {
+            grid-area: hoper;
+        }
+
+        .bouman {
+            grid-area: bouman;
+        }
+
+        .hamilton {
+            grid-area: hamilton;
+        }
+
+        .computer {
+            grid-area: computer;
+        }
+
+        .operator {
+            grid-area: operator;
+        }
+
+        .kare {
+            grid-area: kare;
+        }
+    }
+}
+
+@media screen and (min-width: 330px) and (max-width: 425px){
+    .guests .wrap-visitor {
+        grid-template-rows: 112px repeat(6, 330px);
+
+        .host {
+            margin: 0px auto;
+        }
+
+        .title-guests {
+            width: 90%;
+            display: flex;
+            align-items: center;
+            @include styles-titles-sections($font-f-titles-sections, 36px, $color-title-section, $line-height-title-section);
+        }
+    }
+}
+
+@media screen and (min-width: 426px) and (max-width: 1023px){
+    .guests {
+        .wrap-visitor {
+            display: grid;
+            grid-template-columns: repeat(2, 50%);
+            grid-template-rows: 150px repeat(3, 25%);
+            grid-template-areas:
+            "title     title"
+            "hoper     bouman"
+            "hamilton  computer"
+            "operator  kare";
+
+            .host {
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .title-guests {
+                width: 85%;
+                display: flex;
+                align-items: center;
+                @include styles-titles-sections($font-f-titles-sections, 40px, $color-title-section, $line-height-title-section);
+            }
+        }
+    }
+}
+
+@media screen and(min-width: 640px){
+    .guests {
+        .wrap-visitor {
+            grid-template-rows: 162px repeat(3, 29%);
+
+            .title-guests {
+                width: 80%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .guests {
+        .wrap-visitor {
+            display: grid;
+            grid-template-columns: repeat(3, 33.3%);
+            grid-template-rows: 162px repeat(2, 41%);
+            grid-template-areas:
+            "title     title     title"
+            "hoper     bouman    hamilton"
+            "computer  operator  kare";
+
+            .host {
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .title-guests {
+                width: 72%;
+                display: flex;
+                align-items: center;
+                @include styles-titles-sections($font-f-titles-sections, $font-s-titles-sections, $color-title-section, $line-height-title-section);
+            }
+        }
+    }
+}

@@ -1,0 +1,172 @@
+.origin {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 423.5px 373px;
+    grid-template-areas:
+    "container-phone"
+    "wrap-info";
+    justify-content: center;
+    background: $background-primary;
+
+    .container-phone {
+        width: 100%;
+        height: 100%;
+        grid-area: container-phone;
+        position: relative;
+        @include displayFlex(null, wrap, center, null);
+
+        .wrap-phone {
+            position: absolute;
+            bottom: 0px;
+            z-index: 9;
+            img {
+                width: 320px;
+                height: 519px;
+            }
+        }
+    }
+
+    .wrap-info {
+        grid-area: wrap-info;
+        @include displayFlex(column, wrap, start, center);
+
+        .t-origin {
+            width: 288px;
+            height: 84px;
+            @include styles-titles-sections($font-f-titles-sections, 36px, $color-title-section, $line-height-title-section);
+        }
+
+        .p-origin {
+            width: 288px;
+            height: 254px;
+            @include styles-paragraphs($font-f-paragraph, 14px, $color-paragraph, 22px, $letter-spacing);
+        }
+    }
+}
+
+@media screen and (min-width: 375px) and (max-width: 639px){
+    .origin .container-phone .wrap-phone {
+        display: flex;
+        justify-content: center;
+        bottom: 20px;
+        img {
+            width: 90%;
+        }
+    }
+
+    .origin .wrap-info .t-origin {
+        width: 90%;
+    }
+
+    .origin .wrap-info .p-origin {
+        width: 90%;
+    }
+}
+
+@media screen and (min-width: 426px) and (max-width: 639px){
+    .origin .container-phone .wrap-phone {
+        img {
+            width: 75%;
+        }
+    }
+}
+
+@media screen and(min-width: 640px) {
+    .origin .container-phone .wrap-phone {
+        display: flex;
+        justify-content: center;
+        img {
+            width: 70%;
+            height: 540px;
+        }
+    }
+
+    .origin .wrap-info .t-origin{
+        width: 80%;
+    }
+
+    .origin .wrap-info .p-origin{
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .origin {
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 488px;
+        grid-template-areas:
+        "container-phone wrap-info";
+
+        .container-phone {
+
+            .wrap-phone {
+                img {
+                    width: 420px;
+                    height: 600px;
+                }
+            }
+        }
+
+        .wrap-info {
+            width: 100%;
+            height: 100%;
+            align-items: start;
+
+            .t-origin {
+                width: 100%;
+                height: 15%;
+                @include styles-titles-sections($font-f-titles-sections, $font-s-titles-sections, $color-title-section, $line-height-title-section);
+            }
+
+            .p-origin {
+                width: 80%;
+                height: 80%;
+                p{
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1440px) {
+    .origin{
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 488px;
+        grid-template-areas:
+        "container-phone wrap-info";
+
+        .container-phone {
+            justify-content: flex-end;
+            .wrap-phone {
+                right: 64px;
+                img{
+                    width: 457.6px;
+                    height: 660px;
+                }
+            }
+        }
+
+        .wrap-info {
+            width: 100%;
+            height: 100%;
+            align-items: start;
+
+            .t-origin {
+                width: 399px;
+                height: 62px;
+                @include styles-titles-sections($font-f-titles-sections, $font-s-titles-sections, $color-title-section, $line-height-title-section);
+            }
+
+            .p-origin {
+                width: 464px;
+                height: 204px;
+                p {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}

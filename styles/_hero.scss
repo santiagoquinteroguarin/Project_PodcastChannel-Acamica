@@ -1,0 +1,132 @@
+.hero {
+    width: 100%;
+    background: $background-primary;
+
+    .wrap-hero {
+        width: 90%;
+        height: 100%;
+        margin: 0px auto;
+        display: grid;
+        grid-template-columns: 288px;
+        grid-template-rows: 129px 100px 72px;
+        grid-template-areas:
+        "title"
+        "content-hero"
+        "btn-hero";
+
+        .t-hero {
+            width: 100%;
+            height: 100%;
+            grid-area: title;
+            @include displayFlex(null, null, center, center);
+
+            h1 {
+                font-family: $font-f-title-hero;
+                font-size: 36px;
+                color:  $color-paragraph;
+                letter-spacing: $letter-spacing;
+                line-height: 42px;
+
+                span {
+                    color: $color-title-dot;
+                }
+            }
+        }
+
+        .p-hero {
+            grid-area: content-hero;
+
+            @include styles-paragraphs($font-f-paragraph, 14px, $color-paragraph, $lh-paragraph, $letter-spacing);
+        }
+
+        .btn-hero {
+            grid-area: btn-hero;
+            @include displayFlex(row, wrap, null, flex-start);
+            @include btn-styles(288px, 48px, $font-f-btn, $font-s-btn, $letter-spacing-btn, $color-letter-btn, $background-button, $background-secundary-btn, $color-secundary-btn, $text-transform);
+        }
+    }
+}
+
+@media screen and (min-width: 375px) and (max-width: 425px) {
+    .hero .wrap-hero {
+        width: 90%;
+        grid-template-columns: 100%;
+        grid-template-rows: 35% 35% 30%;
+
+        .t-hero h1 {
+            font-size: 48px;
+            line-height: 50px;
+        }
+
+        .p-hero {
+            @include displayFlex(row, wrap, null, center);
+        }
+
+        .btn-hero {
+            @include displayFlex(row, wrap, center, flex-start);
+            @include btn-styles(100%, 48px, $font-f-btn, $font-s-btn, $letter-spacing-btn, $color-letter-btn, $background-button, $background-secundary-btn, $color-secundary-btn, $text-transform);
+        }
+    }
+}
+
+@media screen and (min-width: 426px){
+    .hero .wrap-hero {
+        width: 85%;
+        grid-template-columns: 100%;
+        grid-template-rows: 40% 30% 30%;
+        .t-hero {
+            width: 100%;
+            @include displayFlex(row, wrap, start, flex-end);
+            h1 {
+                font-size: 52px;
+                line-height: 50px;
+            }
+        }
+
+        .p-hero {
+            width: 86%;
+            display: flex;
+            align-items: flex-start;
+            p{
+                margin-top: 5px;
+                font-size: 16px;
+            }
+        }
+
+        .btn-hero {
+            @include displayFlex(row, wrap, null, flex-start);
+            @include btn-styles(225px, 56px ,$font-f-btn, $font-s-btn, $letter-spacing-btn, $color-letter-btn, $background-button, $background-secundary-btn, $color-secundary-btn, $text-transform);
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1440px){
+    .hero .wrap-hero {
+        width: 70%;
+        grid-template-rows: 204px 48px 117px;
+
+        .t-hero {
+            width: 100%;
+            height: 100%;
+            @include displayFlex(row, wrap, start, flex-end);
+
+            h1 {
+                font-size: $font-s-title-hero;
+                line-height: $line-height-hero;
+            }
+        }
+
+        .p-hero {
+            width: 628px;
+            p{
+                font-size: 16px;
+            }
+        }
+
+        .btn-hero {
+            @include displayFlex(row, wrap, null, flex-end);
+            margin-bottom: 5px;
+            @include btn-styles(226px, 56px ,$font-f-btn, $font-s-btn, $letter-spacing-btn, $color-letter-btn, $background-button, $background-secundary-btn, $color-secundary-btn, $text-transform);
+        }
+    }
+}

@@ -1,0 +1,101 @@
+.layout{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 80px 369px 1042.6px 491.4px 890px 426px 518px 95px;
+    grid-template-areas:
+    "head"
+    "hero"
+    "episodes"
+    "source"
+    "guests"
+    "temary"
+    "news"
+    "footer";
+
+    .header{
+        grid-area: head;
+    }
+
+    .hero{
+        grid-area: hero;
+    }
+
+    .episodes{
+        grid-area: episodes;
+    }
+
+    .origin{
+        grid-area: source;
+    }
+
+    .guests{
+        grid-area: guests;
+    }
+
+    .temary{
+        grid-area: temary;
+    }
+
+    .news{
+        grid-area: news;
+    }
+
+    .footer{
+        grid-area: footer;
+    }
+}
+
+// phone-only
+@media screen and (min-width: 320px) {
+    .layout{
+        grid-template-rows: 44px 303px 1203.5px 850.5px 1569px 1018px 341px 121px;
+    }
+}
+
+@media screen and (min-width: 330px) {
+    .layout{
+        grid-template-rows: 44px 350px 1203.5px 780px 2100px 1018px 341px 121px;
+    }
+}
+
+// phone-only
+@media screen and (min-width: 375px) and (max-width: 425px) {
+    .layout{
+        grid-template-rows: 44px 350px 1203.5px 780px 2100px 1018px 341px 121px;
+    }
+}
+
+@media screen and (min-width: 426px) and (max-width: 639px){
+    .layout{
+        grid-template-rows: 44px 480px 1203.5px 700px 800px 700px 341px 121px;
+    }
+}
+
+// Tablets portrait
+@media screen and (min-width: 640px) and (max-width: 899px) {
+    .layout{
+        grid-template-rows: 44px 480px 1203.5px 750px 1250px 700px 341px 121px;
+    }
+}
+
+
+// Tablets landscape
+@media screen and (min-width:900px){
+    .layout{
+        grid-template-rows: 100px 480px 900px 489px 1250px 450px 341px 121px;
+    }
+}
+
+@media screen and (min-width:1024px){
+    .layout{
+        grid-template-rows: 100px 480px 900px 489px 890px 450px 341px 121px;
+    }
+}
+
+// Desktop
+@media screen and (min-width: 1200px) and (max-width: 1440px) {
+    .layout{
+        grid-template-rows: 80px 369px 1042.6px 491.4px 890px 426px 518px 95px;
+    }
+}

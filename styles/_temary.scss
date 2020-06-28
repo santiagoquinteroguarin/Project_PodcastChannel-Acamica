@@ -1,0 +1,123 @@
+.temary {
+    width: 100%;
+    height: 100%;
+    background: $background-primary;
+
+    .wrap-temary {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 320px;
+        grid-template-rows: 132px 186px 230px 214px 256px;
+        grid-template-areas:
+        "title"
+        "work"
+        "programming"
+        "code"
+        "security";
+
+        .box-temary {
+            @include displayFlex(column, wrap, center, center);
+
+            img {
+                width: 104px;
+                height: 104px;
+            }
+            p {
+                margin-top: 13px;
+                font-family: $font-f-items;
+                font-size: $font-s-items;
+                color: $color-paragraph;
+                line-height: 32px;
+                text-align: $text-align-items;
+            }
+        }
+
+        .title-temary {
+            width: 90%;
+            grid-area: title;
+            margin: 0px auto;
+            @include displayFlex(row, wrap, null, center);
+
+            @include styles-titles-sections($font-f-titles-sections, 36px, $color-title-section, $line-height-title-section);
+        }
+
+        .work {
+            grid-area: work;
+        }
+
+        .programming {
+            grid-area: programming;
+        }
+
+        .code {
+            grid-area: code;
+        }
+
+        .security {
+            grid-area: security;
+        }
+    }
+}
+
+@media screen and (min-width: 375px) and (max-width: 425px){
+    .temary .wrap-temary {
+        width: 90%;
+        margin: 0px auto;
+        grid-template-columns: 100%;
+    }
+}
+
+@media screen and (min-width: 426px){
+    .temary {
+
+        .wrap-temary {
+            margin: 0px auto;
+            width: 80%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 180px 250px 250px;
+            grid-template-areas:
+            "title    title"
+            "work     programming"
+            "code     security";
+            align-items: flex-start;
+
+            .title-temary {
+                height: 100%;
+                align-items: center;
+                @include styles-titles-sections($font-f-titles-sections, $font-s-titles-sections, $color-title-section, $line-height-title-section);
+            }
+
+            .box-temary {
+                width: 100%;
+                height: 100%;
+                align-items: center;
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 900px) {
+    .temary {
+
+        .wrap-temary {
+            margin: 0px auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 182px 244px;
+            grid-template-areas:
+            "title     title         title    title"
+            "work    programming      code    security";
+            align-items: flex-start;
+
+            .title-temary {
+                height: 100%;
+                align-items: center;
+                @include styles-titles-sections($font-f-titles-sections, $font-s-titles-sections, $color-title-section, $line-height-title-section);
+            }
+        }
+    }
+}
